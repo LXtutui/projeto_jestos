@@ -1,0 +1,70 @@
+ 
+<html>
+  <head>
+    <title>Emoção em</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h1 class="btn btn-danger heading">jestos com a mão
+        <br> 
+        <span>&#129305;</span>
+        <span>&#128077;</span>
+        <span>&#128079;</span>
+        <span>&#129304;</span>
+        <span>&#9996;</span>
+        <span>&#9994;</span>
+      </h1>
+      <br>
+      <br>
+
+      <p style="font-size: 22px;">tire uma foto com um jesto para saber o significado
+      	<br>
+        <b style="color: rgb(0, 255, 30)">trenado nos segintes gestos</b>
+        <br>
+        <span>&#129305;</span>
+        <span>&#128077;</span>
+        <span>&#9996;</span>
+        <br>
+      </p>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>visualização da Webcam:</label>
+        <div id="camera"></div>
+        <br><br>
+        <button class="btn btn-danger" onclick="tirar_foto()">pegar imagem</button>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>previsão :</label>
+        <p class="emotion_name" id="result_emotion_name"></p>
+        <p class="emoji"id="update_emoji"></p>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Foto:</label>
+        <div id="result"></div>
+        <br><br>
+        <button class="btn btn-primary" onclick="checar()">prever emoção</button>
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+<!--https://teachablemachine.withgoogle.com/models/ieTY3PA9y/-->
